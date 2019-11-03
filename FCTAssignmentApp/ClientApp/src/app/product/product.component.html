@@ -1,0 +1,20 @@
+<h1 id="tableLabel">Available products for purchase</h1>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="products">
+  <thead>
+    <tr>
+      <th (click)="sort('name')" class="click">Name</th>
+      <th (click)="sort('price')" class="click">Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td class="click"><a [routerLink]="['/listproduct',product.id]">Purchase</a></td>
+    </tr>
+  </tbody>
+</table>

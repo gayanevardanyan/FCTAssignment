@@ -1,0 +1,19 @@
+<h1 id="tableLabel">Product To purchase</h1>
+
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <tr>
+      <td>Name</td>
+      <td>{{ product.name }}</td>
+    </tr>
+    <tr>
+      <td>Price</td>
+      <td>{{ product.price }}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a class="click" (click)="order()">Order Product</a> | <a class="click" (click)="cancel()">Cancel</a></td>
+    </tr>
+  </table>
+
+
+
